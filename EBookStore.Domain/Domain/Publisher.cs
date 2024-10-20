@@ -9,6 +9,7 @@ namespace EBookStore.Domain.Domain
 {
     public class Publisher : BaseEntity
     {
+ 
         [Required]
         public string Name { get; set; }
         [Required]

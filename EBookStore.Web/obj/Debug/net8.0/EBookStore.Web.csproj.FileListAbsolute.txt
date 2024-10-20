@@ -292,3 +292,4 @@ D:\FINKI\6Semestar\IS\EBookStoreProject\EBookStore.Web\bin\Debug\net8.0\runtimes
 D:\FINKI\6Semestar\IS\EBookStoreProject\EBookStore.Web\bin\Debug\net8.0\runtimes\win-arm64\native\e_sqlite3.dll
 D:\FINKI\6Semestar\IS\EBookStoreProject\EBookStore.Web\bin\Debug\net8.0\runtimes\win-x64\native\e_sqlite3.dll
 D:\FINKI\6Semestar\IS\EBookStoreProject\EBookStore.Web\bin\Debug\net8.0\runtimes\win-x86\native\e_sqlite3.dll
+D:\FINKI\6Semestar\IS\EBookStoreProject\EBookStore.Web\obj\Debug\net8.0\EBookStore.Web.sourcelink.json

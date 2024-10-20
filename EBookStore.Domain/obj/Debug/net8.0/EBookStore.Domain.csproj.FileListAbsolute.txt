@@ -10,3 +10,4 @@ D:\FINKI\6Semestar\IS\EBookStoreProject\EBookStore.Domain\obj\Debug\net8.0\EBook
 D:\FINKI\6Semestar\IS\EBookStoreProject\EBookStore.Domain\obj\Debug\net8.0\refint\EBookStore.Domain.dll
 D:\FINKI\6Semestar\IS\EBookStoreProject\EBookStore.Domain\obj\Debug\net8.0\EBookStore.Domain.pdb
 D:\FINKI\6Semestar\IS\EBookStoreProject\EBookStore.Domain\obj\Debug\net8.0\ref\EBookStore.Domain.dll
+D:\FINKI\6Semestar\IS\EBookStoreProject\EBookStore.Domain\obj\Debug\net8.0\EBookStore.Domain.sourcelink.json

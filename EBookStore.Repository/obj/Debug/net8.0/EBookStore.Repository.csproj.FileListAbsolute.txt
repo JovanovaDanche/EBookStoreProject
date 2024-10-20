@@ -13,3 +13,4 @@ D:\FINKI\6Semestar\IS\EBookStoreProject\EBookStore.Repository\obj\Debug\net8.0\E
 D:\FINKI\6Semestar\IS\EBookStoreProject\EBookStore.Repository\obj\Debug\net8.0\refint\EBookStore.Repository.dll
 D:\FINKI\6Semestar\IS\EBookStoreProject\EBookStore.Repository\obj\Debug\net8.0\EBookStore.Repository.pdb
 D:\FINKI\6Semestar\IS\EBookStoreProject\EBookStore.Repository\obj\Debug\net8.0\ref\EBookStore.Repository.dll
+D:\FINKI\6Semestar\IS\EBookStoreProject\EBookStore.Repository\obj\Debug\net8.0\EBookStore.Repository.sourcelink.json

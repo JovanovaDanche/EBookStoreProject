@@ -15,7 +15,7 @@ namespace EBookStore.Domain.Domain
         public string BookCover { get; set; }
         public String Description { get; set; }
         [Required]
-        public virtual ICollection<Author>? Authors { get; set; }
+        public Author? Author { get; set; }
 
         [Required]
         public double Rating { get; set; }
