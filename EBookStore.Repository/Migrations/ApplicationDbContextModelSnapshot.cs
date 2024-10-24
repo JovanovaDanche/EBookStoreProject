@@ -36,25 +36,15 @@ namespace EBookStore.Repository.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<Guid?>("BookId")
-                        .HasColumnType("uniqueidentifier");
-
                     b.Property<string>("Name")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
-
-                    b.Property<Guid?>("PublisherId")
-                        .HasColumnType("uniqueidentifier");
 
                     b.Property<string>("Surname")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.HasKey("Id");
-
-                    b.HasIndex("BookId");
-
-                    b.HasIndex("PublisherId");
 
                     b.ToTable("Authors");
                 });
@@ -63,6 +53,9 @@ namespace EBookStore.Repository.Migrations
                 {
                     b.Property<Guid>("Id")
                         .ValueGeneratedOnAdd()
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<Guid>("AuthorId")
                         .HasColumnType("uniqueidentifier");
 
                     b.Property<string>("BookCover")
@@ -94,6 +87,8 @@ namespace EBookStore.Repository.Migrations
                         .HasColumnType("nvarchar(max)");
 
                     b.HasKey("Id");
+
+                    b.HasIndex("AuthorId");
 
                     b.HasIndex("PublisherId");
 
@@ -419,24 +414,21 @@ namespace EBookStore.Repository.Migrations
                     b.ToTable("AspNetUserTokens", (string)null);
                 });
 
-            modelBuilder.Entity("EBookStore.Domain.Domain.Author", b =>
-                {
-                    b.HasOne("EBookStore.Domain.Domain.Book", null)
-                        .WithMany("Authors")
-                        .HasForeignKey("BookId");
-
-                    b.HasOne("EBookStore.Domain.Domain.Publisher", null)
-                        .WithMany("Authors")
-                        .HasForeignKey("PublisherId");
-                });
-
             modelBuilder.Entity("EBookStore.Domain.Domain.Book", b =>
                 {
+                    b.HasOne("EBookStore.Domain.Domain.Author", "Author")
+                        .WithMany()
+                        .HasForeignKey("AuthorId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
                     b.HasOne("EBookStore.Domain.Domain.Publisher", "Publisher")
                         .WithMany()
                         .HasForeignKey("PublisherId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
+
+                    b.Navigation("Author");
 
                     b.Navigation("Publisher");
                 });
@@ -548,19 +540,9 @@ namespace EBookStore.Repository.Migrations
                         .IsRequired();
                 });
 
-            modelBuilder.Entity("EBookStore.Domain.Domain.Book", b =>
-                {
-                    b.Navigation("Authors");
-                });
-
             modelBuilder.Entity("EBookStore.Domain.Domain.Order", b =>
                 {
                     b.Navigation("BooksInOrders");
-                });
-
-            modelBuilder.Entity("EBookStore.Domain.Domain.Publisher", b =>
-                {
-                    b.Navigation("Authors");
                 });
 
             modelBuilder.Entity("EBookStore.Domain.Domain.ShoppingCart", b =>

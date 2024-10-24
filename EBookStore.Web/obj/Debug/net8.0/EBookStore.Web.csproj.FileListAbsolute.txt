@@ -84,7 +84,6 @@ D:\FINKI\6Semestar\IS\EBookStoreProject\EBookStore.Web\bin\Debug\net8.0\System.R
 D:\FINKI\6Semestar\IS\EBookStoreProject\EBookStore.Web\bin\Debug\net8.0\System.Runtime.Caching.dll
 D:\FINKI\6Semestar\IS\EBookStoreProject\EBookStore.Web\bin\Debug\net8.0\System.Security.Cryptography.ProtectedData.dll
 D:\FINKI\6Semestar\IS\EBookStoreProject\EBookStore.Web\bin\Debug\net8.0\System.Security.Permissions.dll
-D:\FINKI\6Semestar\IS\EBookStoreProject\EBookStore.Web\bin\Debug\net8.0\System.Text.Json.dll
 D:\FINKI\6Semestar\IS\EBookStoreProject\EBookStore.Web\bin\Debug\net8.0\System.Windows.Extensions.dll
 D:\FINKI\6Semestar\IS\EBookStoreProject\EBookStore.Web\bin\Debug\net8.0\af\Humanizer.resources.dll
 D:\FINKI\6Semestar\IS\EBookStoreProject\EBookStore.Web\bin\Debug\net8.0\ar\Humanizer.resources.dll
@@ -293,3 +292,9 @@ D:\FINKI\6Semestar\IS\EBookStoreProject\EBookStore.Web\bin\Debug\net8.0\runtimes
 D:\FINKI\6Semestar\IS\EBookStoreProject\EBookStore.Web\bin\Debug\net8.0\runtimes\win-x64\native\e_sqlite3.dll
 D:\FINKI\6Semestar\IS\EBookStoreProject\EBookStore.Web\bin\Debug\net8.0\runtimes\win-x86\native\e_sqlite3.dll
 D:\FINKI\6Semestar\IS\EBookStoreProject\EBookStore.Web\obj\Debug\net8.0\EBookStore.Web.sourcelink.json
+D:\FINKI\6Semestar\IS\EBookStoreProject\EBookStore.Web\bin\Debug\net8.0\Microsoft.Extensions.Caching.Memory.dll
+D:\FINKI\6Semestar\IS\EBookStoreProject\EBookStore.Web\bin\Debug\net8.0\Microsoft.Extensions.DependencyInjection.dll
+D:\FINKI\6Semestar\IS\EBookStoreProject\EBookStore.Web\bin\Debug\net8.0\Microsoft.Extensions.DependencyInjection.Abstractions.dll
+D:\FINKI\6Semestar\IS\EBookStoreProject\EBookStore.Web\bin\Debug\net8.0\Microsoft.Extensions.Logging.dll
+D:\FINKI\6Semestar\IS\EBookStoreProject\EBookStore.Web\bin\Debug\net8.0\Microsoft.Extensions.Logging.Abstractions.dll
+D:\FINKI\6Semestar\IS\EBookStoreProject\EBookStore.Web\bin\Debug\net8.0\System.Formats.Asn1.dll

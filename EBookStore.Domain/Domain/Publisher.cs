@@ -18,7 +18,6 @@ namespace EBookStore.Domain.Domain
         public double Rating { get; set; }
         [Required]
         public string MobileNum { get; set; }
-        public virtual ICollection<Author>? Authors { get; set; }
 
     }
 }
