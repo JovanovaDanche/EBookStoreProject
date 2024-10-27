@@ -29,7 +29,7 @@ namespace EBookStore.Repository.Implementation
         {
             return entities.SingleOrDefault(s => s.Id == id);
         }
-        public void Insert(T entity)
+        public T Insert(T entity)
         {
             if (entity == null)
             {
@@ -37,9 +37,10 @@ namespace EBookStore.Repository.Implementation
             }
             entities.Add(entity);
             context.SaveChanges();
+            return entity;
         }
 
-        public void Update(T entity)
+        public T Update(T entity)
         {
             if (entity == null)
             {
@@ -47,9 +48,10 @@ namespace EBookStore.Repository.Implementation
             }
             entities.Update(entity);
             context.SaveChanges();
+            return entity;
         }
 
-        public void Delete(T entity)
+        public T Delete(T entity)
         {
             if (entity == null)
             {
@@ -57,6 +59,17 @@ namespace EBookStore.Repository.Implementation
             }
             entities.Remove(entity);
             context.SaveChanges();
+            return entity;
+        }
+        public List<T> InsertMany(List<T> entities)
+        {
+            if (entities == null)
+            {
+                throw new ArgumentNullException("entities");
+            }
+            entities.AddRange(entities);
+            context.SaveChanges();
+            return entities;
         }
     }
 }

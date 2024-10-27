@@ -3,6 +3,11 @@ using Microsoft.EntityFrameworkCore;
 using EBookStore.Domain;
 using EBookStore.Repository;
 using Microsoft.AspNetCore.Identity;
+using EBookStore.Repository.Implementation;
+using EBookStore.Repository.Interface;
+using EBookStore.Service.Interface;
+using EBookStore.Service.Implementation;
+using System.Text.Json.Serialization;
 
 
 var builder = WebApplication.CreateBuilder(args);
@@ -16,6 +21,15 @@ builder.Services.AddDatabaseDeveloperPageExceptionFilter();
 builder.Services.AddDefaultIdentity<EBookStoreAppUser>(options => options.SignIn.RequireConfirmedAccount = true)
     .AddEntityFrameworkStores<ApplicationDbContext>();
 builder.Services.AddControllersWithViews();
+builder.Services.AddScoped(typeof(IRepository<>), typeof(Repository<>));
+builder.Services.AddScoped(typeof(IUserRepository), typeof(UserRepository));
+//builder.Services.AddScoped(typeof(IOrderRepository), typeof(OrderRepository));
+builder.Services.AddTransient<IAuthorService, AuthorService>();
+builder.Services.AddTransient<IBookService, BookService>();
+builder.Services.AddTransient<IPublisherService, PublisherService>();
+builder.Services.AddTransient<IShoppingCartService, ShoppingCartService>();
+builder.Services.AddControllers().AddJsonOptions(x =>
+   x.JsonSerializerOptions.ReferenceHandler = ReferenceHandler.Preserve);
 
 var app = builder.Build();
 

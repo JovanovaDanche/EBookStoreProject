@@ -11,8 +11,9 @@ namespace EBookStore.Repository.Interface
     {
         IEnumerable<T> GetAll();
         T Get(Guid? id);
-        void Insert(T entity);
-        void Update(T entity);
-        void Delete(T entity);
+        T Insert(T entity);
+        List<T> InsertMany(List<T> entities);
+        T Update(T entity);
+        T Delete(T entity);
     }
 }

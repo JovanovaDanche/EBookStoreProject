@@ -7,18 +7,27 @@ using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using EBookStore.Domain.Domain;
 using EBookStore.Repository;
+using EBookStore.Service.Interface;
+using EBookStore.Domain.DTO;
+using Microsoft.AspNetCore.Authorization;
+using System.Security.Claims;
 
 namespace EBookStore.Web.Controllers
 {
     public class BooksController : Controller
     {
         private readonly ApplicationDbContext _context;
+        private readonly IBookService _productService;
+        private readonly IShoppingCartService _shoppingCartService;
 
-        public BooksController(ApplicationDbContext context)
+        public BooksController(ApplicationDbContext context, IBookService productService, IShoppingCartService shoppingCartService)
         {
             _context = context;
+            _productService = productService;
+            _shoppingCartService = shoppingCartService;
         }
 
+   
         // GET: Books
         public async Task<IActionResult> Index()
         {
@@ -166,6 +175,31 @@ namespace EBookStore.Web.Controllers
         private bool BookExists(Guid id)
         {
             return _context.Books.Any(e => e.Id == id);
+        }
+        [Authorize]
+
+        public IActionResult AddProductToCart(Guid Id)
+        {
+            var result = _shoppingCartService.getProductInfo(Id);
+            if (result != null)
+            {
+                return View(result);
+            }
+            return View();
+        }
+
+        [HttpPost]
+        public IActionResult AddProductToCart(AddToCartDTO model)
+        {
+            var userId = User.FindFirstValue(ClaimTypes.NameIdentifier);
+
+            var result = _shoppingCartService.AddProductToShoppingCart(userId, model);
+
+            if (result != null)
+            {
+                return RedirectToAction("Index", "ShoppingCarts");
+            }
+            else { return View(model); }
         }
     }
 }
