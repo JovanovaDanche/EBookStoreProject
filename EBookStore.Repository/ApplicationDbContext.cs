@@ -1,4 +1,5 @@
-﻿using EBookStore.Domain.Domain;
+﻿using EBookStore.Domain;
+using EBookStore.Domain.Domain;
 using EBookStore.Domain.Identity;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
@@ -20,6 +21,7 @@ namespace EBookStore.Repository
         public virtual DbSet<BookInOrder> BookInOrders { get; set; }
         public virtual DbSet<Book> Books { get; set; }
         public virtual DbSet<Publisher> Publishers { get; set; }
+        public virtual DbSet<EmailMessage> EmailMessages { get; set; }
 
     }
 }

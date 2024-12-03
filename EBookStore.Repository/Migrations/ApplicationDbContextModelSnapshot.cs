@@ -17,7 +17,7 @@ namespace EBookStore.Repository.Migrations
         {
 #pragma warning disable 612, 618
             modelBuilder
-                .HasAnnotation("ProductVersion", "8.0.8")
+                .HasAnnotation("ProductVersion", "8.0.10")
                 .HasAnnotation("Relational:MaxIdentifierLength", 128);
 
             SqlServerModelBuilderExtensions.UseIdentityColumns(modelBuilder);
@@ -201,6 +201,29 @@ namespace EBookStore.Repository.Migrations
                         .HasFilter("[OwnerId] IS NOT NULL");
 
                     b.ToTable("ShoppingCarts");
+                });
+
+            modelBuilder.Entity("EBookStore.Domain.EmailMessage", b =>
+                {
+                    b.Property<Guid>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<string>("Content")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("MailTo")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<bool>("Status")
+                        .HasColumnType("bit");
+
+                    b.Property<string>("Subject")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("EmailMessages");
                 });
 
             modelBuilder.Entity("EBookStore.Domain.Identity.EBookStoreAppUser", b =>

@@ -291,3 +291,6 @@ D:\FINKI\6Semestar\IS\EBookStoreProject\EBookStore.Web\bin\Debug\net8.0\Microsof
 D:\FINKI\6Semestar\IS\EBookStoreProject\EBookStore.Web\bin\Debug\net8.0\Microsoft.Extensions.Logging.Abstractions.dll
 D:\FINKI\6Semestar\IS\EBookStoreProject\EBookStore.Web\bin\Debug\net8.0\System.Formats.Asn1.dll
 D:\FINKI\6Semestar\IS\EBookStoreProject\EBookStore.Web\bin\Debug\net8.0\Stripe.net.dll
+D:\FINKI\6Semestar\IS\EBookStoreProject\EBookStore.Web\bin\Debug\net8.0\BouncyCastle.Cryptography.dll
+D:\FINKI\6Semestar\IS\EBookStoreProject\EBookStore.Web\bin\Debug\net8.0\MailKit.dll
+D:\FINKI\6Semestar\IS\EBookStoreProject\EBookStore.Web\bin\Debug\net8.0\MimeKit.dll
