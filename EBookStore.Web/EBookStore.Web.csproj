@@ -28,4 +28,14 @@
     <ProjectReference Include="..\EBookStore.Service\EBookStore.Service.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="wwwroot\images\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="wwwroot\images\authors.jpg" />
+    <None Include="wwwroot\images\bookshelf.jpg" />
+    <None Include="wwwroot\images\shopping.jpg" />
+  </ItemGroup>
+
 </Project>
